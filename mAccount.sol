@@ -13,8 +13,8 @@ interface IERC20 {
 }
 
 interface MCOIN {
-    function deposit(address token, uint256 amount) external returns (bool);
-    function withdraw(address token, address destination, uint256 amount) external returns (bool);
+    function mint(address to, uint256 amount) external returns (bool);
+    function burn(address from, uint256 amount) external returns (bool);
 }
 
 contract DepositAccount {
