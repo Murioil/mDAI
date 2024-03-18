@@ -21,7 +21,7 @@ contract ERC20 {
     mapping(address => mapping(address => uint)) public allowance;
     mapping(address => bool) public isUser;
     address[] public users;
-    address minter;
+    address public minter;
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);    
 
