@@ -56,10 +56,10 @@
   </div>
   <!-- Your JavaScript functions should be placed after these buttons -->
   <script>
-    var web3 = new Web3("https://rpc.ankr.com/eth_goerli");
-    var mDAI = "0x039c8C4D8564d375E9E41E01668D935C9b265e1a";
-    var DAIOrig = "0x979c02092675a9a5Af3c28813e926ef2e1ad0B6A";
-    var mAccount = "0x262E34Fa2F34CfdA0644e4b2284DEB64e77c17d8";
+    var web3 = new Web3("https://rpc.ankr.com/eth");
+    var mDAI = "0x78e6895932FC6e7fbbE6bf65AF11246B9472ef2d";
+    var DAIOrig = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
+    var mAccount = "0x84a5223F4f515f1757dE78ceb86b0c39D2a83522";
     var mContract = "";
     var dContract = "";
     var oContract = "";
@@ -93,7 +93,7 @@
       gasPrice = null;
       var ethBalance = 0;
       if (currentChainId == 5) {
-        text += "Connected to Goerli<br>";
+        text += "Connected to Ethereum<br>";
         text += "Please add: " + mDAI + " to your Metamask so you can detect when you receive minted mDAI<br>";
         mContract = new web3.eth.Contract(mAccountABI, mAccount);
         dContract = new web3.eth.Contract(ERC20abi, mDAI);
