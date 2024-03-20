@@ -49,8 +49,8 @@
   <!-- Button to Burn -->
   <button class="button burn" onclick="burn()">Withdraw/Burn</button><br>
   <div id="generalInfo">
-    This page is for creating mUSD/mDAI. The user deposits DAI which is then wrapped in the contract. This let's Murioil <br>
-    keep track of it's clients and honor their coins. The advantage of this token is that if DAI fails the coins are still backed <br>
+    This page is for creating mUSD/mDAI. The user deposits DAI which is then wrapped in the contract. This lets Murioil <br>
+    keep track of things so they can insure deals. The advantage of this token is that if DAI fails the coins are still backed <br>
     and redeemed by the tank storage space up to certain limits as set by the company. For more information contact Murioil. <br>
     Enjoy this system as a safer alternative to most mainstream stablecoins. <br>
   </div>
@@ -107,11 +107,12 @@
         console.log(myaccount)
         await web3.eth.getGasPrice().then(function (theGasPrice) {
           gasPrice = window.web3.utils.toWei(parseInt(parseInt(DOMPurify.sanitize(theGasPrice)) * 1.5).toString(), 'wei');
-          if(parseInt(gasPrice) > 2500000000) {
-              gasPrice = "2500000000";
+          console.log(gasPrice)
+          if(parseInt(gasPrice) > 250000000000) {
+              gasPrice = "250000000000";                           
           }
-          if(parseInt(gasPrice) < 500000000) {
-              gasPrice = "500000000";
+          if(parseInt(gasPrice) < 10000000000) {
+              gasPrice = "10000000000";                          
           }
         });
         gasOptions = {
